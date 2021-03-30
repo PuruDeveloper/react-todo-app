@@ -13,7 +13,9 @@ function App() {
 
     //Fetching todos from database
       db.collection('todos').orderBy('timestamp', 'desc').onSnapshot(snapshot => {
-        setTodos(snapshot.docs.map((doc) => doc.data().todo))
+        setTodos(snapshot.docs.map((doc) => ({
+          id:doc.id,
+          todo: doc.data().todo})))
       })
   }, [])
 
@@ -37,8 +39,8 @@ function App() {
         <Button disabled={!input} type="submit" onClick={addTodo} variant="contained" color="primary"   >Add Todo</Button>
         {/* <button >Add Todo</button> */}
         <ul>
-          {todos.map((todo, index) => (
-            <Todo index={index} text={todo}/>
+          {todos.map((todo) => (
+            <Todo todo={todo}/>
           ))}
         </ul>
       </form>
