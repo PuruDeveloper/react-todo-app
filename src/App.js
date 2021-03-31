@@ -1,6 +1,5 @@
 import './App.css';
 import { useState, useEffect } from 'react';
-import { Button, FormControl, InputLabel, Input } from '@material-ui/core'
 import Todo from './Todo'
 import db from './firebase'
 import firebase from "firebase"
@@ -25,18 +24,20 @@ function App() {
     db.collection('todos').add({
       todo: input,
       timestamp: firebase.firestore.FieldValue.serverTimestamp()
-    }) 
+    })
     setInput('')
   }
   return (
-    <div className="App">
-      <h2>Hi</h2>
+    <div className="header">
+      <h2>Write a Todo and fix your life</h2>
       <form >
-        <FormControl>
-          <InputLabel>Write a todo</InputLabel>
-          <Input value={input} onChange={event => setInput(event.target.value)}  />
-        </FormControl>
-        <Button disabled={!input} type="submit" onClick={addTodo} variant="contained" color="primary"   >Add Todo</Button>
+      <div className="header__below" >
+        <div className="header__input">
+          <input placeholder="Write a todo" value={input} onChange={event => setInput(event.target.value)}  />
+        </div>
+        <button disabled={!input} type="submit" onClick={addTodo} variant="contained" color="primary"   >Add Todo</button>
+      </div>
+        
         {/* <button >Add Todo</button> */}
         <ul>
           {todos.map((todo) => (

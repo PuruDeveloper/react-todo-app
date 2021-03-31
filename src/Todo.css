@@ -1,0 +1,78 @@
+.todo__list {
+  display: flex;
+  padding-left: 10px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.todo__list__text {
+  font-family: "Averia Serif Libre", cursive;
+  font-weight: 500;
+  margin-right: 10px;
+  background-color: rgb(198, 209, 220);
+  padding: 5px 5px;
+  border-radius: 3px;
+}
+
+.todo__modal {
+  visibility: hidden;
+  margin: 0;
+  position: absolute;
+}
+
+.todo__modal.active {
+  padding: 10px 0 10px;
+  visibility: visible;
+  position: relative;
+  background-color: rgb(92, 138, 184);
+  left: -1.5%;
+}
+
+.todo__modal.active h1 {
+  color: white;
+  background-color: rgb(92, 138, 184);
+}
+
+.todo__modal__inner {
+  background-color: rgb(92, 138, 184);
+}
+
+@media (max-width: 1300px) {
+  .todo__modal.active {
+    padding: 10px 0 10px;
+    visibility: visible;
+    position: relative;
+    background-color: rgb(92, 138, 184);
+    left: -1.7%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .todo__modal.active {
+    left: -2%;
+  }
+}
+
+@media (max-width: 800px) {
+  .todo__modal.active {
+    left: -2.5%;
+  }
+}
+
+@media (max-width: 700px) {
+  .todo__modal.active {
+    left: -3.5%;
+  }
+}
+@media (max-width: 500px) {
+  .todo__modal.active {
+    left: -4.5%;
+  }
+}
+
+@media (max-width: 450px) {
+  .todo__modal.active {
+    left: -5.9%;
+  }
+}
