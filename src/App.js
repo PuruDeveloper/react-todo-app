@@ -44,7 +44,7 @@ function App() {
   }
   return (
     <div className="header">
-      <h2>Write a Todo and fix your life</h2>
+      <h2>Add a note and get to work</h2>
       <form >
       <div className="header__below" >
         <div className="header__input">
