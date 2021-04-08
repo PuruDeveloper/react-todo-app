@@ -6,11 +6,11 @@ import db  from "./firebase"
 
 function Todo(props) {
     const [ open, setOpen ] = useState(false)
-    const [ input, setInput] = useState(`${props.todo.todo}`)
+    const [ input, setInput] = useState("")
 
     const handleOpen = (e) =>{ 
         e.preventDefault();
-        setOpen(true);
+        setOpen(!open);
     }
 
     const handleDelete = (e) => {
