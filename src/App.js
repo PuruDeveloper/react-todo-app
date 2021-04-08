@@ -48,7 +48,7 @@ function App() {
       <form >
       <div className="header__below" >
         <div className="header__input">
-          <input placeholder="Write a todo" value={input} onChange={event => setInput(event.target.value)} />
+          <input placeholder="Write a note" value={input} onChange={event => setInput(event.target.value)} />
         </div>
         <button disabled={!input} type="submit" onClick={addTodo} variant="contained" color="primary"   ><i class="fas fa-plus-square"></i></button>
       </div>
