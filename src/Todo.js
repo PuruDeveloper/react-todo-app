@@ -4,10 +4,9 @@ import './Todo.css'
 import db  from "./firebase"
 
 
-
 function Todo(props) {
     const [ open, setOpen ] = useState(false)
-    const [ input, setInput] = useState("")
+    const [ input, setInput] = useState(`${props.todo.todo}`)
 
     const handleOpen = (e) =>{ 
         e.preventDefault();
@@ -30,19 +29,28 @@ function Todo(props) {
             className={open ? "todo__modal active" : "todo__modal"}
             open={open}
             onClose={e => setOpen(false)}
-        >
+            >
             <div className="todo__modal__inner" >
                 <h1>I am a modal</h1>
                 <input 
                 placeholder={props.todo.todo}
                 value={input} 
                 onChange={e => setInput(e.target.value)} />
-                <button onClick={updateTodo} >Update Todo</button>
+                <button disabled={!input} onClick={updateTodo} >Update Todo</button>
             </div>
-        </div>
+            </div>
         <List className="todo__list" >
-        <div className="todo__list__text" >{props.todo.todo}</div>
+        <div className="todo__list__text" >
+            <div className="todo__list__text text" >{props.todo.todo}</div>
+            <div className="todo__list__text time" >{props.todo.date}</div>
+            {/* <ListItemText primary={props.todo.todo} secondary={props.todo.date} /> */}
+        </div>
             
+        {/* <div className="todo__list__text" >{props.todo.todo}
+        </div>
+        <div className="todo__list__text" >
+            {props.todo.date}
+        </div> */}
         <button onClick={handleOpen} >Edit</button>
         <button onClick={handleDelete} >Delete Message</button>
         </List>

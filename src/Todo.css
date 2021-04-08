@@ -15,6 +15,11 @@
   border-radius: 3px;
 }
 
+.todo__list__text.time {
+  font-family: "Open Sans Condensed", sans-serif;
+  color: gray;
+}
+
 .todo__modal {
   visibility: hidden;
   margin: 0;
@@ -37,6 +42,22 @@
 .todo__modal__inner {
   background-color: rgb(92, 138, 184);
 }
+
+/* .MuiTypography-body1 {
+  font-family: "Averia Serif Libre", cursive;
+}
+
+.MuiListItemText-primary {
+  font-weight: 500;
+  margin-right: 10px;
+  background-color: rgb(198, 209, 220);
+  padding: 5px 5px;
+  border-radius: 3px;
+}
+
+.MuiListItemText-secondary {
+  background-color: rgb(224, 234, 245);
+} */
 
 @media (max-width: 1300px) {
   .todo__modal.active {
