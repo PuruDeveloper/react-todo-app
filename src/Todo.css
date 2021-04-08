@@ -43,6 +43,24 @@
   background-color: rgb(92, 138, 184);
 }
 
+.fa-pencil-alt {
+  font-size: 1.2rem;
+}
+
+.fa-trash-alt {
+  font-size: 1.2rem;
+}
+
+.update__button {
+  background-color: rgb(112, 54, 167);
+  color: #000000;
+  padding: 10px 10px 10px 10px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
 /* .MuiTypography-body1 {
   font-family: "Averia Serif Libre", cursive;
 }

@@ -31,12 +31,12 @@ function Todo(props) {
             onClose={e => setOpen(false)}
             >
             <div className="todo__modal__inner" >
-                <h1>I am a modal</h1>
+                <h1>Update Your Note</h1>
                 <input 
                 placeholder={props.todo.todo}
                 value={input} 
                 onChange={e => setInput(e.target.value)} />
-                <button disabled={!input} onClick={updateTodo} >Update Todo</button>
+                <button className="update__button" disabled={!input} onClick={updateTodo} >Update Note</button>
             </div>
             </div>
         <List className="todo__list" >
@@ -51,8 +51,8 @@ function Todo(props) {
         <div className="todo__list__text" >
             {props.todo.date}
         </div> */}
-        <button onClick={handleOpen} >Edit</button>
-        <button onClick={handleDelete} >Delete Message</button>
+        <button onClick={handleOpen} ><i class="fas fa-pencil-alt"></i></button>
+        <button onClick={handleDelete} ><i className="fas fa-trash-alt"></i></button>
         </List>
         </div>
     )

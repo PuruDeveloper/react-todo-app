@@ -36,10 +36,16 @@ input {
 }
 
 button {
-  color: black;
-  background-color: blueviolet;
-  padding: 10px 10px;
+  color: #000000;
+  padding: 10px 10px 15px 10px;
   margin-right: 10px;
   border: none;
   cursor: pointer;
+}
+
+.fa-plus-square {
+  font-size: 2rem;
+  text-align: center;
+  align-items: center;
+  top: -5px;
 }
