@@ -10,12 +10,15 @@ function Todo(props) {
 
     const handleOpen = (e) =>{ 
         e.preventDefault();
+        setInput(props.todo.todo)
         setOpen(!open);
     }
 
     const handleDelete = (e) => {
         e.preventDefault();
-         db.collection('todos').doc(props.todo.id).delete()
+        db.collection('todos').doc(props.todo.id).delete();
+        setInput("");
+        setOpen(false);
     }
 
     const updateTodo = (e) => {
